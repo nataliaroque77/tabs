@@ -19,7 +19,6 @@ interface TabItemProps {
 const App = (props: TabsProps) => {
     const { tabs } = useContext(TabsContext);
     const { provinces } = useContext(ProvincesContext);
-    console.log(provinces)
     const [item, setItem] = useState(provinces[0].name);
     return (
         <>
