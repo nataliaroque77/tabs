@@ -17,63 +17,52 @@ type ProvincesContextProps = {
 }
 
 
-// this data can be api call
+// this data can be generated in api call, depending of country selected
 const provincesContextList: ProvincesContextProps = {
     provinces: [
         {
             name: 'Alberta',
-            key: 'AB',
-            link: '#'
+            key: 'AB'
         },
         {
             name: 'British Columbia',
-            key: 'BC',
-            link: '#'
+            key: 'BC'
         },
         {
             name: 'Manitoba',
-            key: 'MB',
-            link: '#'
+            key: 'MB'
         },
         {
             name: 'New Brunswick',
-            key: 'NB',
-            link: '#'
+            key: 'NB'
         },
         {
             name: 'Newfoundland',
-            key: 'NL',
-            link: '#'
+            key: 'NL'
         },
         {
             name: 'Northwest Territories',
-            key: 'NT',
-            link: '#'
+            key: 'NT'
         },
         {
             name: 'Nova Scotia',
-            key: 'NS',
-            link: '#'
+            key: 'NS'
         },
         {
             name: 'Ontario',
-            key: 'ON',
-            link: '#'
+            key: 'ON'
         },
         {
             name: 'Prince Edward Island',
-            key: 'PE',
-            link: '#'
+            key: 'PE'
         },
         {
             name: 'Quebec',
-            key: 'QC',
-            link: '#'
+            key: 'QC'
         },
         {
             name: 'Saskatchewan',
-            key: 'SK',
-            link: '#'
+            key: 'SK'
         }
     ],
     fetchCountryProvinces: () =>console.log('Fetching all my provinces')
