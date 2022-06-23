@@ -52,7 +52,7 @@ function Tabs(props: any) {
             <TabsContainer>
                 {props.children.map( (item:any, index:number) => {
                     return (
-                        <>
+                       <div key={`tabs-conatiner${index}`}>
                             <Accordion
                                 role="tab"
                                 id={`tab${index}`}
@@ -73,7 +73,7 @@ function Tabs(props: any) {
                             >
                                 {props.children[state.selected]}
                             </TabsWrapContent>
-                        </>
+                       </div>
                     );
                 })}
              </TabsContainer>
