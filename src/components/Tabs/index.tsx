@@ -52,13 +52,13 @@ function Tabs(props: any) {
             <TabsContainer>
                 {props.children.map( (item:any, index:number) => {
                     return (
-                       <div key={`tabs-conatiner${index}`}>
+                        <div key={`tabscontainer-${index}`}>
                             <Accordion
                                 role="tab"
                                 id={`tab${index}`}
                                 aria-controls={`panel${index}`}
-                                key={`accordion-${index}`}
                                 tabIndex={0}
+                                className={state.selected === index ? 'active' : ''}
                                 onClick={ (e: any) => toggle(e, index) }
                                 onKeyPress={ (e: any) => toggle(e, index) }
                             >
@@ -68,12 +68,11 @@ function Tabs(props: any) {
                                 role="tabpanel"
                                 id={`panel${index}`}
                                 aria-labelledby={`tab${index}`}
-                                key={`tabcontent-${index}`}
                                 className={state.selected === index ? 'active' : ''}
                             >
                                 {props.children[state.selected]}
                             </TabsWrapContent>
-                       </div>
+                        </div>
                     );
                 })}
              </TabsContainer>

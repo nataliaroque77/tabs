@@ -1,19 +1,21 @@
 import styled from 'styled-components';
+import { color, media } from '../../theme';
+import { rem } from 'polished';
 
 export const TabsContainer = styled.div`
-    padding: 0;
-    background-color: #fff;
     clear: left;
     min-height: initial;
     width: 100%;
-    
-    @media all and (min-width: 767px) {
-        min-height: 630px;
+    padding: 0;
+    background: ${color.palette.white};
+
+    @media ${media.medium} {
+        min-height: 300px;
     }
 `;
 export const TabsWrapContent = styled.div`
     display: none;
-    padding: 1em 1.4em;
+    padding: 16px 24px;
     
     &.active {
      display: block;
@@ -29,88 +31,81 @@ export const TabsPanel = styled.ul`
         display: flex;
         flex-grow: 1;
         list-style: none;
-        margin: 1px .2em 0 0;
+        margin: 1px .2px 0 0;
 
-        background: #929090;
-        color: #fff;
+        background: ${color.palette.dustyGray};
+        color: ${color.palette.white};
         padding: .9em 1em;
         text-decoration: none;
     
         font-weight: bold;
-        font-size: 18px;
+        font-size: ${rem('27px')};
         cursor: pointer;
         line-height: 1;
-       
       
         &:hover {
-          background: #766A62;
+          background: ${color.palette.doveGray};
         }
         
         &:focus {
-            outline: 2px solid #169BA2;
+            outline: 2px solid ${color.palette.lightOrient};
             outline-offset: 2px;
         }
         
         &.active  {
-            //background: #006983;
-            background: #A12016;
+            background: ${color.palette.rubi};
         }
     }
   
-    li a {
-     
-    }
-   
     li.tab-active {
-        background: #fff;
-        color: #212121;
+      background: ${color.palette.white};
+        color: ${color.palette.black};
         &:hover {
-          background: #766A62;
+          background: ${color.palette.doveGray};
         }
     }
-    
-    @media all and (min-width: 767px) {
+
+   @media ${media.medium} {
         display: flex;
         flex-wrap: wrap;
         margin-top: 0;
         padding-left: 0;
-        flex-direction: row;
-    }
+   }
 `;
 
 export const Accordion = styled.h2`
     display: block;
-    cursor: pointer;
     padding: 6px 15px;
-    font-size: 18px;
-    background: #006983;
-    font-weight: normal;
-    color: #fff;
     border: 0;
     margin: 1px 0 0;
+    background: ${color.palette.mosqueLight};
+    color: ${color.palette.white};
+    font-size: ${rem('27px')};
+    font-weight: normal;
+    cursor: pointer;
     
     &:hover {
-      background: #766a62;
+      background: ${color.palette.doveGray};
     }
 
    &:focus {
-     outline: 1px dotted #fff;
+     outline: 1px dotted ${color.palette.white};
      outline-offset: -2px;
    }
     
-    &.tab-active {
+    &.active {
         margin-bottom: 0;
-        background: #fff;
-        color:#006983;
-        border: 1px solid #006983;
-        
+        border: 2px solid ${color.palette.mosqueLight};
+        background: ${color.palette.white};
+        color: ${color.palette.mosqueLight};
+
         &:hover {
-            color: #766a62;
-            background: #fff;
+            background: ${color.palette.white};
+            color: ${color.palette.doveGray};
         }
     }
-    
-    @media all and (min-width: 767px) {
+
+    @media ${media.medium} {
        display: none;
     }
 `;

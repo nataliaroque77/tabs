@@ -1,11 +1,12 @@
 import styled from 'styled-components';
+import { color, media } from '../../theme';
 
 export const Container = styled.div`
   position: relative;
-  width: 100%;
   bottom: 0;
+  width: 100%;
   height: calc(100vh - 400px);
-
+  
   @media (min-width: 767px) {
     height: calc(100vh - 300px);
   }
@@ -42,17 +43,16 @@ export const HeroImage = styled.div`
   &:after {
     content: '';
     position: absolute;
+    top: 0;
     left: 0;
     right: 0;
-    top: 0;
     bottom: 0;
     background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 100%);
   }
 `;
 
 export const PageHeading = styled.h1`
-    color: #000;
-  
+    color: ${color.palette.trueBlack};;
 `;
 
 export const HeroContent = styled.div`
